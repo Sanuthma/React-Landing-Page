@@ -1,0 +1,106 @@
+.navBar {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navBar.light {
+  background-color: #eb5ea6;
+}
+
+.navBar.dark {
+  background-color: rgb(69, 6, 34);
+}
+
+.navBar .leftSide {
+  flex: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.navBar .leftSide img {
+  width: 90px;
+}
+
+.navBar .rightSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 50px;
+  position: relative;
+}
+
+.navBar .rightSide .links {
+  display: flex;
+  align-items: center;
+}
+
+.navBar .rightSide .links a {
+  text-decoration: none;
+  margin: 0 25px;
+  color: black; 
+}
+
+.navBar.dark .rightSide .links a {
+  color: white;
+}
+
+
+.navBar .rightSide .threelines {
+  background-color: transparent;
+  border: none;
+  color: rgb(9, 0, 0);
+  cursor: pointer;
+  display: none;
+}
+
+.navBar .rightSide svg {
+  font-size: 40px;
+}
+
+.navBar .rightSide .show a {
+  display: flex;
+}
+
+.navBar #open {
+  padding-left: 50px;
+}
+
+.navBar #open .hiddenLinks {
+  display: inherit;
+  margin-left: 30px;
+}
+
+.navBar #close .hiddenLinks {
+  display: inherit;
+}
+
+.navBar #open a {
+  width: 70px;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navBar .rightSide .links {
+    display: none;
+  }
+
+  .navBar .rightSide.open .links {
+    display: flex;
+    position: relative;
+    right: 0;
+    width: 50%;
+    text-align: center;
+  }
+
+  .navBar .rightSide button.threelines {
+    display: inherit;
+  }
+
+} 
